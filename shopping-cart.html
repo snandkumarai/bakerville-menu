@@ -55,30 +55,46 @@
 <body>
     <header class="fixed top-0 left-0 right-0 z-50 bg-bg-main/70 backdrop-blur-md border-b border-olive/5">
         <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 hover:text-olive transition-colors" aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
             <nav class="hidden lg:flex items-center gap-8 w-1/3">
                 <a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors"
                     href="full-menu.html">Menu</a>
                 <a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors"
                     href="our-story.html">Our Story</a>
             </nav>
-            <div class="flex items-center justify-center w-1/3">
+            <div class="flex items-center justify-center lg:w-1/3">
                 <a class="text-3xl font-serif tracking-tight text-ink" href="index.html">BAKERVILLE</a>
             </div>
-            <div class="flex items-center justify-end gap-8 w-1/3">
+            <div class="flex items-center justify-end gap-8 lg:w-1/3">
                 <nav class="hidden lg:flex items-center gap-8">
                     <a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors"
                         href="contact-catering.html">Catering</a>
                     <a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors"
                         href="shopping-cart.html">Order Online</a>
                 </nav>
-                <a href="shopping-cart.html" class="relative p-1"><span
+                <a href="shopping-cart.html" class="relative p-1" aria-label="Shopping cart, 3 items"><span
                         class="material-symbols-outlined text-2xl">shopping_bag</span>
                     <span
                         class="absolute -top-1 -right-1 bg-olive text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
                 </a>
             </div>
         </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-bg-main border-t border-olive/10 px-8 py-6 space-y-4">
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-olive transition-colors" href="full-menu.html">Menu</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-olive transition-colors" href="our-story.html">Our Story</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-olive transition-colors" href="contact-catering.html">Catering</a>
+            <a class="block text-sm font-medium uppercase tracking-widest text-olive" href="shopping-cart.html">Order Online</a>
+        </div>
     </header>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
+    </script>
     <main class="max-w-7xl mx-auto px-8 pt-40 pb-24">
         <div class="mb-16">
             <span class="section-label">Your Selection</span>
@@ -103,14 +119,14 @@
                             <div class="flex items-center gap-8">
                                 <div
                                     class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Decrease quantity of Signature Sourdough"><span
                                             class="material-symbols-outlined text-sm">remove</span></button>
                                     <span class="text-xs font-semibold w-4 text-center">1</span>
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Increase quantity of Signature Sourdough"><span
                                             class="material-symbols-outlined text-sm">add</span></button>
                                 </div>
                                 <button
-                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors" aria-label="Remove Signature Sourdough from cart">Remove</button>
                             </div>
                         </div>
                     </div>
@@ -132,14 +148,14 @@
                             <div class="flex items-center gap-8">
                                 <div
                                     class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Decrease quantity of Butter Croissant"><span
                                             class="material-symbols-outlined text-sm">remove</span></button>
                                     <span class="text-xs font-semibold w-4 text-center">2</span>
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Increase quantity of Butter Croissant"><span
                                             class="material-symbols-outlined text-sm">add</span></button>
                                 </div>
                                 <button
-                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors" aria-label="Remove Butter Croissant from cart">Remove</button>
                             </div>
                         </div>
                     </div>
@@ -161,14 +177,14 @@
                             <div class="flex items-center gap-8">
                                 <div
                                     class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Decrease quantity of Pain au Chocolat"><span
                                             class="material-symbols-outlined text-sm">remove</span></button>
                                     <span class="text-xs font-semibold w-4 text-center">1</span>
-                                    <button class="hover:text-olive transition-colors"><span
+                                    <button class="hover:text-olive transition-colors" aria-label="Increase quantity of Pain au Chocolat"><span
                                             class="material-symbols-outlined text-sm">add</span></button>
                                 </div>
                                 <button
-                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+                                    class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors" aria-label="Remove Pain au Chocolat from cart">Remove</button>
                             </div>
                         </div>
                     </div>
@@ -243,7 +259,10 @@
                     </div>
                     <h4 class="text-2xl mb-1">Morning Buns</h4>
                     <p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Cinnamon &amp; Orange</p>
-                    <p class="text-lg font-serif">$4.50</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-serif">$4.50</p>
+                        <button class="text-[10px] font-semibold uppercase tracking-widest text-olive hover:text-ink transition-colors" aria-label="Add Morning Buns to cart">+ Add</button>
+                    </div>
                 </div>
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
@@ -253,7 +272,10 @@
                     </div>
                     <h4 class="text-2xl mb-1">Rosemary Focaccia</h4>
                     <p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Sea Salt &amp; EVOO</p>
-                    <p class="text-lg font-serif">$9.00</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-serif">$9.00</p>
+                        <button class="text-[10px] font-semibold uppercase tracking-widest text-olive hover:text-ink transition-colors" aria-label="Add Rosemary Focaccia to cart">+ Add</button>
+                    </div>
                 </div>
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
@@ -263,7 +285,10 @@
                     </div>
                     <h4 class="text-2xl mb-1">Almond Frangipane</h4>
                     <p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Toasted Almonds</p>
-                    <p class="text-lg font-serif">$5.50</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-serif">$5.50</p>
+                        <button class="text-[10px] font-semibold uppercase tracking-widest text-olive hover:text-ink transition-colors" aria-label="Add Almond Frangipane to cart">+ Add</button>
+                    </div>
                 </div>
                 <div class="group cursor-pointer">
                     <div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
@@ -273,7 +298,10 @@
                     </div>
                     <h4 class="text-2xl mb-1">Artisan Flat White</h4>
                     <p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">House Blend No.1</p>
-                    <p class="text-lg font-serif">$4.25</p>
+                    <div class="flex items-center justify-between">
+                        <p class="text-lg font-serif">$4.25</p>
+                        <button class="text-[10px] font-semibold uppercase tracking-widest text-olive hover:text-ink transition-colors" aria-label="Add Artisan Flat White to cart">+ Add</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -287,9 +315,9 @@
                     fresh-roasted coffee.</p>
                 <div class="flex gap-4">
                     <a class="w-10 h-10 border border-bg-paper/20 rounded-full flex items-center justify-center hover:bg-bg-paper hover:text-ink transition-colors"
-                        href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+                        href="#" aria-label="Visit our website"><span class="material-symbols-outlined text-lg">public</span></a>
                     <a class="w-10 h-10 border border-bg-paper/20 rounded-full flex items-center justify-center hover:bg-bg-paper hover:text-ink transition-colors"
-                        href="#"><span class="material-symbols-outlined text-lg">camera</span></a>
+                        href="#" aria-label="Follow us on Instagram"><span class="material-symbols-outlined text-lg">camera</span></a>
                 </div>
             </div>
             <div>
@@ -314,7 +342,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto mt-24 pt-8 border-t border-bg-paper/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-bg-paper/30">
-            <span>© 2024 Bakerville Artisanal Bakeries</span>
+            <span>© 2025 Bakerville Artisanal Bakeries</span>
             <div class="flex gap-8">
                 <a class="hover:text-bg-paper transition-colors" href="#">Privacy Policy</a>
                 <a class="hover:text-bg-paper transition-colors" href="#">Terms of Service</a>

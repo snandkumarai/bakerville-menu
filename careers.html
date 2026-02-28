@@ -55,7 +55,10 @@
 <body>
     <header class="sticky top-0 z-50 w-full bg-bakery-bg/95 backdrop-blur-md border-b border-bakery-olive/10">
         <nav class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <div class="flex-1 flex gap-6 text-[13px] uppercase tracking-wider font-medium">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 hover:text-bakery-olive transition-colors" aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            <div class="hidden lg:flex flex-1 gap-6 text-[13px] uppercase tracking-wider font-medium">
                 <a class="hover:text-bakery-olive transition-colors" href="full-menu.html">Menu</a>
                 <a class="hover:text-bakery-olive transition-colors" href="our-story.html">Our Story</a>
             </div>
@@ -63,14 +66,30 @@
                 <a class="text-4xl font-heading font-light tracking-tight text-bakery-ink"
                     href="index.html">Bakerville</a>
             </div>
-            <div class="flex-1 flex justify-end items-center gap-6 text-[13px] uppercase tracking-wider font-medium">
+            <div class="hidden lg:flex flex-1 justify-end items-center gap-6 text-[13px] uppercase tracking-wider font-medium">
                 <a class="hover:text-bakery-olive transition-colors" href="contact-catering.html">Catering</a>
                 <a class="hover:text-bakery-olive transition-colors" href="shopping-cart.html">Order Online</a>
-                <a href="shopping-cart.html" class="ml-4 flex items-center"><span
+                <a href="shopping-cart.html" class="ml-4 flex items-center" aria-label="Shopping cart"><span
                         class="material-symbols-outlined text-2xl font-light">shopping_bag</span></a>
             </div>
+            <a href="shopping-cart.html" class="lg:hidden flex items-center" aria-label="Shopping cart"><span
+                    class="material-symbols-outlined text-2xl font-light">shopping_bag</span></a>
         </nav>
+        <div id="mobile-menu" class="hidden lg:hidden bg-bakery-bg border-t border-bakery-olive/10 px-8 py-6 space-y-4">
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="full-menu.html">Menu</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="our-story.html">Our Story</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="contact-catering.html">Catering</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="shopping-cart.html">Order Online</a>
+            <a class="block text-sm font-medium uppercase tracking-widest text-bakery-olive" href="careers.html">Careers</a>
+        </div>
     </header>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
+    </script>
     <main>
         <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0">
@@ -333,7 +352,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto px-6 mt-24 pt-8 border-t border-bakery-paper/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] uppercase tracking-widest text-bakery-paper/30 font-bold">
-            <p>© 2024 Bakerville Artisanal Group. All rights reserved.</p>
+            <p>© 2025 Bakerville Artisanal Group. All rights reserved.</p>
             <div class="flex gap-10">
                 <a class="hover:text-bakery-paper transition-colors" href="#">Privacy Policy</a>
                 <a class="hover:text-bakery-paper transition-colors" href="#">Terms of Service</a>
