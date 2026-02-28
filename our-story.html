@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Story | Bakerville Artisanal Bakery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "cream": "#fdfcf8",
+                        "paper": "#f5f2ed",
+                        "ink": "#1a1a1a",
+                        "olive": "#5A5A40",
+                        "crust": "#8B4513",
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            @apply bg-cream text-ink font-sans;
+        }
+        .section-label {
+            @apply text-xs uppercase tracking-[0.3em] text-olive font-semibold mb-4 block;
+        }
+        h1, h2, h3, h4, h5 {
+            @apply font-serif font-[300];
+        }
+        .timeline-line {
+            background: #5A5A40;
+            width: 1px;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body class="antialiased">
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-olive/10">
+<div class="max-w-7xl mx-auto px-8 h-24 grid grid-cols-3 items-center">
+<nav class="flex items-center gap-8 text-xs uppercase tracking-widest font-medium">
+<a class="hover:text-crust transition-colors" href="#">Menu</a>
+<a class="hover:text-crust transition-colors" href="#">Our Story</a>
+<a class="hover:text-crust transition-colors" href="#">Workshops</a>
+</nav>
+<div class="flex justify-center">
+<h1 class="text-3xl font-serif tracking-tight">Bakerville</h1>
+</div>
+<div class="flex items-center justify-end gap-8">
+<a class="text-xs uppercase tracking-widest font-medium hover:text-crust transition-colors" href="#">Locations</a>
+<button class="flex items-center gap-2 hover:text-crust transition-colors">
+<span class="material-symbols-outlined font-light">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<section class="relative h-[85vh] w-full overflow-hidden">
+<div class="absolute inset-0 bg-black/30 z-10"></div>
+<img alt="Bakery Interior" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSSJeJQWp9ipEGDd8iQvFvUTV4XVtKTRTW5eCbhN9iv7KHgb6UEF-KOI8WqP1WyDbX6YnmF-BHvOc5zClvECgRCPEe9I8xzYgQMXJKTV5vy8nxs7kR2VkpgnV5cvua-nkC85HWnmvFUTK3TwMOAfMglHcCaPXFjGuiQ11HVh2WDf1OeXOPqsXg1GI7VtBvuc4AuHC03cALuIPBDX281PwB3nhgkikkHPJE9hNf3NEGpYIvhBxJKK6NcSyNdonBTqKoLEsz-PCc"/>
+<div class="relative z-20 h-full flex flex-col items-center justify-center text-center px-6">
+<span class="text-white/90 text-xs uppercase tracking-[0.4em] mb-6">Est. 2012</span>
+<h2 class="text-white text-6xl md:text-8xl font-serif mb-8 max-w-4xl leading-tight">Our Story</h2>
+<div class="w-px h-24 bg-white/40"></div>
+</div>
+</section>
+<section class="py-32 bg-cream">
+<div class="max-w-3xl mx-auto text-center px-6">
+<span class="section-label">A Legacy of Flour</span>
+<p class="text-2xl md:text-3xl font-serif leading-relaxed italic text-olive/80">
+                "We believe bread is the soul of the table. What began with a single sourdough starter in a home kitchen has grown into a sanctuary for the senses."
+            </p>
+</div>
+</section>
+<section class="pb-32 max-w-7xl mx-auto px-6">
+<div class="relative">
+<div class="absolute left-1/2 -translate-x-1/2 h-full timeline-line hidden lg:block"></div>
+<div class="relative grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-40">
+<div class="lg:text-right order-2 lg:order-1">
+<span class="font-serif text-4xl mb-4 block text-crust">2012</span>
+<h4 class="text-3xl mb-6">The First Sourdough Starter</h4>
+<p class="text-ink/60 leading-relaxed max-w-md lg:ml-auto">
+                        In a quiet neighborhood kitchen, the Bakerville journey began. Arthur spent six months perfecting a wild yeast starter, nurtured with organic rye and pure spring water. This same starter lives in every loaf we bake today.
+                    </p>
+</div>
+<div class="order-1 lg:order-2">
+<img alt="Sourdough Process" class="rounded-[40px] w-full aspect-[4/5] object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBO1UCySY2r1wqfckSgTLWeeAF9xVKmOly8H29MMCEv7rRcbAbFCz1ons_20UfI-yHRnpN50VwZ7mMJjqqgcugk0HJL4pKlJVQE7390GTk6OoM-IiK5lTSFFfJLHK2nvm09mywdP4S0NmyH68hiXOPXKth5TdUf3MdzgPMhRkHPi5LX0vhHXRaGvSqLCZoeL61f1c2QTauvu1tSsgs1yoeRzhwa4T7gZAPyAzixEGweub5ImDYnXs0eMImOg3ekLAQERCAfCHsP"/>
+</div>
+</div>
+<div class="relative grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-40">
+<div class="order-1">
+<img alt="First Storefront" class="rounded-[40px] w-full aspect-[4/5] object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG3hKVvhmpvhY0BNgb50eZoiCCRhGOv22voLkB3rN-GQIK-9ERrL8SVf4N1nn-q_G2WOAUudmC8g8oEOXzp-ltSqnTo5FznJnBPu1oxInJCVv3qnwWteofZD9YevJ8-cqvuT2EkgqgNC6Gyu70mljQ_r4lSGu6eKRYZ_VIx1_dro1K3irFZv6gtMtrkcj5gbVIG6szb0sPKMmfuCYwdtZPV-RVNv7k193Qbvl2DWP0wQC7uKd9k5_n1wq9Enn7qGiU8c1-PByx"/>
+</div>
+<div class="order-2">
+<span class="font-serif text-4xl mb-4 block text-crust">2015</span>
+<h4 class="text-3xl mb-6">The Flagship Opening</h4>
+<p class="text-ink/60 leading-relaxed max-w-md">
+                        We found our home in a historic brick building. Our goal was simple: to create a space where the aroma of fresh baking greeted every neighbor, and craftsmanship was visible in every corner.
+                    </p>
+</div>
+</div>
+<div class="relative grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-40">
+<div class="lg:text-right order-2 lg:order-1">
+<span class="font-serif text-4xl mb-4 block text-crust">2018</span>
+<h4 class="text-3xl mb-6">Expanding the Craft</h4>
+<p class="text-ink/60 leading-relaxed max-w-md lg:ml-auto">
+                        Beyond bread, we ventured into artisanal viennoiserie. Hand-laminated croissants and seasonal tarts became our signature, marrying French technique with local ingredients.
+                    </p>
+</div>
+<div class="order-1 lg:order-2">
+<img alt="Artisanal Pastries" class="rounded-[40px] w-full aspect-[4/5] object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX1Kn7BkV-QB7FZ2yDEvJUX6C7GnOug8RQ3GX2b0b9M26830_xUhh4Ws0WSoElme44ouwIRw4T-zGNq0ZcojnB3JjToJCSZyqS6pTR4hfxQ7fPRFm7L2iXt1Mec5FjkmfA1ZqWEOtXikj0SSh597zkztYIgTyC-spQ4k-MXf7R8S1vkGN_1Zh7VJJ9t3qiCoqWhvyIQpJKyvUlQPGV85kvmw0k3wymdbpKzjJqw9Y4wUaz50FLcDrqqBf6lj8abcVxTDB_SVGk"/>
+</div>
+</div>
+<div class="relative grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-40">
+<div class="order-1">
+<img alt="Renovated Space" class="rounded-[40px] w-full aspect-[4/5] object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWNNABkGzxvnsMs2V-1mui4gKF3mvAZrjITI4vGNLcIobVBWIx8A3LS0TLX2jWec9MZjz4svXezTztiAeq8V9mq8SCAITUcYv8EQpL5KkMvnkmLzy437Dtkq1kLLi-35pxy2HMu0idV83bAVexMw3eCkmYT7Nei15FR5LRkcwcwpuWqHm_ByQ1MFfJ4Tkr8FXomwyjFzgIytOcrE2rRXs18nLdVECmsghljKxdchiuIcVJWD0wmz55T4p6K_Ks8OAJcgRgFZzz"/>
+</div>
+<div class="order-2">
+<span class="font-serif text-4xl mb-4 block text-crust">2022</span>
+<h4 class="text-3xl mb-6">A Decade of Community</h4>
+<p class="text-ink/60 leading-relaxed max-w-md">
+                        Celebrating ten years of feeding our community. We renovated our space to include an open workshop, allowing guests to witness the slow, patient process of traditional baking.
+                    </p>
+</div>
+</div>
+<div class="relative grid lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+<div class="lg:text-right order-2 lg:order-1">
+<span class="font-serif text-4xl mb-4 block text-crust">Today</span>
+<h4 class="text-3xl mb-6">The Journey Continues</h4>
+<p class="text-ink/60 leading-relaxed max-w-md lg:ml-auto">
+                        While we grow, our heart remains small-batch. Every loaf is still shaped by hand, every morning still starts with the same starter, and every guest is still treated like family.
+                    </p>
+</div>
+<div class="order-1 lg:order-2">
+<img alt="Baker at Work" class="rounded-[40px] w-full aspect-[4/5] object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkA54qHZZhyqbvBqPA0km8f3yrfy03I-9tuXJEhGScZBfuH2cIQJX80A3TySvmMt_BZZ2Q8GjQLZemPMMstbhW23HxjbPTtIZNqB5ra2DKuIb9zmr5Q8yQrFmyqJFE-TXY4UD_-4WYav-qPLOSXK1GSgdCB5X2_MtygSqfTvsjqogN1pKcHeqlCnHmGkhAFU6uYIKap-BRt5_puMXL28lSwjkvANPcHu9SV70RbGuCofAowAib5OVked6sDB02_GpuLpZsRj94"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-paper py-32">
+<div class="max-w-7xl mx-auto px-6 text-center">
+<span class="section-label">The Hands Behind the Craft</span>
+<h2 class="text-5xl mb-20">Meet the Founders</h2>
+<div class="grid md:grid-cols-2 gap-20 max-w-4xl mx-auto">
+<div class="flex flex-col items-center">
+<div class="w-64 h-64 rounded-full overflow-hidden mb-8 shadow-inner ring-8 ring-cream">
+<img alt="Arthur Baker" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrlALuViAeFXT65ogN61P9RUfZdSbqj3U4r3xEX59Ijk8L_fD2wtsRHrmfop_szWVuhpTkXTs5zd6mZb6sKGK1Hr-QW6PT27L2NWN_upwE1zLMNyaNjzBC72UpsoCJRGHW-apakGM11gJZi_HKWRq-WqO7HVTkT0dmL2eTQsJ2fgG4djERxHuSzqMHMhkn82GnNTmgocy-Zgv7KxJG6589u9Ag51samYqz40E_-Pv-FvgXDuQhX3hvI76KSA7oqaRr2jSj3YBc"/>
+</div>
+<h4 class="text-2xl mb-2">Arthur Baker</h4>
+<span class="text-xs uppercase tracking-widest text-olive/70 mb-4 block">Master Boulanger</span>
+<p class="text-ink/60 text-sm leading-relaxed italic">
+                        "Patience is the most important ingredient. You cannot rush the grain, and you cannot rush the fire."
+                    </p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-64 h-64 rounded-full overflow-hidden mb-8 shadow-inner ring-8 ring-cream">
+<img alt="Elena Baker" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXYDyB1kLYGGRKRuUwzKXf7N_Xbc1PUFW4Ct9F8GwPxfVBumO9PAbX9U2lP-vZXFXrkEXuEWVkKWDFLlSqWc6a2UscPATOasQXdmc1KEwW_AneKfyJyFDSHdA4Bau-T7v0IEKL-tbPnrbYcLD6Di7zYoswYtjR6fzvZ2Env6Sx7UFvPNFCbJafvhft8K2EvgU0LOkF1MWlHlekFVrYDcCtxdidrXyoitjN8ODiXI-2nU0-6AYotBH8i7ONcLwameu-xolnNbV3"/>
+</div>
+<h4 class="text-2xl mb-2">Elena Baker</h4>
+<span class="text-xs uppercase tracking-widest text-olive/70 mb-4 block">Creative Director</span>
+<p class="text-ink/60 text-sm leading-relaxed italic">
+                        "A bakery is a sanctuary. We create spaces where the world slows down, if only for the duration of a coffee."
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-16">
+<div class="text-center">
+<span class="material-symbols-outlined text-olive text-4xl mb-6">eco</span>
+<h4 class="text-2xl mb-4">Scratch-Made</h4>
+<p class="text-ink/60 text-sm leading-relaxed">
+                    No additives, no shortcuts. Every pastry and loaf is made by hand daily using only flour, water, salt, and time.
+                </p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-olive text-4xl mb-6">local_shipping</span>
+<h4 class="text-2xl mb-4">Sustainably Sourced</h4>
+<p class="text-ink/60 text-sm leading-relaxed">
+                    We partner with family-owned mills and local farmers to ensure our grains are organic and our carbon footprint is light.
+                </p>
+</div>
+<div class="text-center">
+<span class="material-symbols-outlined text-olive text-4xl mb-6">favorite</span>
+<h4 class="text-2xl mb-4">Community Rooted</h4>
+<p class="text-ink/60 text-sm leading-relaxed">
+                    We believe in the power of the local table. Every evening, our surplus bread is shared with neighborhood shelters.
+                </p>
+</div>
+</div>
+</section>
+<section class="relative h-[60vh] w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-ink/50 z-10"></div>
+<img alt="Bakery Background" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH5ozpzUzieKoZUWqOY92xR-6vEbHQR51Jw_sGR_fCtKFtVsVjPDvBZIlAB4e3iLp-9krMGfH1ntuU-yPwrD-k2YjDkT1LBuea_1zAKlN7JoyLLeu4YvlNuhArNRrYW5K00ki4GCyjVIMSgP_qBD8iRkwjHIfi9qU2xPP0013q8b-FHVCtYFDfMmqb0aoXrhJfCETALXJyHydtGLc8KBE_nyElHnXgMxdPsvZ33GeS11uIZJo44PSrzxJfbHLMoSNGWCWoiAR2"/>
+<div class="relative z-20 text-center px-6 max-w-4xl">
+<blockquote class="text-white text-4xl md:text-5xl font-serif italic leading-tight">
+                "Bakerville isn't just a bakery; it's the heart of our morning ritual. You can taste the history in every sourdough bite."
+            </blockquote>
+<cite class="text-white/70 text-xs uppercase tracking-[0.3em] mt-12 block not-italic">— Seattle Culinary Gazette</cite>
+</div>
+</section>
+<section class="py-32 bg-cream text-center px-6">
+<span class="section-label">Visit Bakerville</span>
+<h2 class="text-5xl mb-6">Taste the Tradition</h2>
+<p class="text-ink/60 max-w-xl mx-auto mb-12">
+            Experience the warmth of our ovens and the dedication of our bakers. Our doors are open daily from dawn until dusk.
+        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-olive text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-olive/90 transition-all">
+                View Our Menu
+            </button>
+<button class="border border-olive text-olive px-10 py-4 rounded-full text-xs uppercase tracking-widest font-semibold hover:bg-olive hover:text-white transition-all">
+                Order Online
+            </button>
+</div>
+</section>
+</main>
+<footer class="bg-ink text-paper py-20">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-20">
+<div class="col-span-1 md:col-span-2">
+<h3 class="text-3xl font-serif mb-6">Bakerville</h3>
+<p class="text-paper/40 text-sm leading-relaxed max-w-xs">
+                    Artisanal sourdough, hand-laminated pastries, and a commitment to the slow craft of traditional baking since 2012.
+                </p>
+</div>
+<div>
+<h5 class="text-xs uppercase tracking-widest font-semibold mb-6">Navigate</h5>
+<ul class="space-y-4 text-paper/60 text-sm">
+<li><a class="hover:text-paper transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Menu</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Locations</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Workshops</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs uppercase tracking-widest font-semibold mb-6">Connect</h5>
+<ul class="space-y-4 text-paper/60 text-sm">
+<li><a class="hover:text-paper transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Newsletter</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-paper transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-paper/30">
+<p>© 2024 Bakerville Artisanal Bakery</p>
+<div class="flex gap-8">
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+<a href="#">Accessibility</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

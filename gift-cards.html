@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Revised Bakerville Gift Cards</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bakery-bg': '#fdfcf8',
+                        'bakery-paper': '#f5f2ed',
+                        'bakery-ink': '#1a1a1a',
+                        'bakery-olive': '#5A5A40',
+                        'bakery-crust': '#8B4513',
+                    },
+                    fontFamily: {
+                        'serif': ['"Cormorant Garamond"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'ultra-wide': '0.3em',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-bakery-bg text-bakery-ink font-sans antialiased;
+            }
+            h1, h2, h3, h4 {
+                @apply font-serif;
+            }
+        }
+        .section-label {
+            @apply text-xs uppercase tracking-ultra-wide text-bakery-olive font-semibold mb-4 block;
+        }
+        .input-bottom-border {
+            @apply border-0 border-b border-gray-300 bg-transparent px-0 py-2 focus:ring-0 focus:border-bakery-olive transition-colors w-full;
+        }
+    </style>
+</head>
+<body>
+<header class="fixed top-0 w-full z-50 bg-bakery-bg/70 backdrop-blur-md border-b border-bakery-olive/10 px-8 py-5">
+<div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
+<nav class="flex items-center gap-8 text-[13px] uppercase tracking-widest font-medium">
+<a class="hover:text-bakery-olive transition-colors" href="#">Menu</a>
+<a class="hover:text-bakery-olive transition-colors" href="#">Our Story</a>
+<a class="hover:text-bakery-olive transition-colors" href="#">Gallery</a>
+</nav>
+<div class="text-center">
+<a class="text-3xl font-serif tracking-tight" href="#">Bakerville</a>
+</div>
+<nav class="flex items-center justify-end gap-8 text-[13px] uppercase tracking-widest font-medium">
+<a class="hover:text-bakery-olive transition-colors" href="#">Catering</a>
+<a class="hover:text-bakery-olive transition-colors" href="#">Order Online</a>
+<a class="hover:text-bakery-olive transition-colors" href="#">Reviews</a>
+<button class="relative ml-2">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-bakery-crust text-white text-[9px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+</button>
+</nav>
+</div>
+</header>
+<main>
+<section class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-20">
+<div class="absolute inset-0 z-0">
+<img alt="Warm bread basket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBWgBQEsnraEHm-OSpyVFHQZHe7ZWAwcAVlUA5Ntut6FCyLplww3QhWx3FXbShUNqvEsmhYTvcYu71V2xLz0B14XwmQ4F1ezrT7jwkJ8tmyWynvsCTtWtjbVZT5yrjP-o5qhpnawWy6-YjHGnZbnFaIqj4CL_YYhBIMluk1OGoZijLfAy0vuw9WtUZuJ-dD-tAmbZAXLD1FJhnogDGk7t2-SUxeSNnz0A5fHfMmTYnz_7oUInRf4gFnOExIp77K_-LnRT7uVHB"/>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<span class="text-white uppercase tracking-[0.4em] text-sm mb-6 block font-medium">Share the Artisanal Spirit</span>
+<h1 class="text-7xl md:text-8xl text-white font-light leading-none mb-8">The Gift of Bakerville</h1>
+<p class="text-xl text-white/90 font-light max-w-xl mx-auto mb-10 font-serif italic">Freshly baked sourdough, delicate pastries, and the warmth of a morning cafe, all in one card.</p>
+<a class="inline-block border border-white text-white px-10 py-4 rounded-full hover:bg-white hover:text-bakery-ink transition-all uppercase text-xs tracking-widest font-semibold" href="#purchase">
+                Select a Card
+            </a>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-8 lg:px-20 py-32" id="purchase">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div class="sticky top-32 space-y-12">
+<div class="space-y-4">
+<span class="section-label">Selected Design</span>
+<div class="relative aspect-[1.58/1] w-full rounded-2xl overflow-hidden shadow-2xl border border-bakery-paper">
+<div class="absolute inset-0 bg-bakery-bg"></div>
+<div class="absolute top-0 right-0 w-32 h-32 bg-bakery-olive/5 rounded-full -mr-16 -mt-16"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-bakery-olive/5 rounded-full -ml-24 -mb-24"></div>
+<div class="relative h-full p-10 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="space-y-1">
+<p class="font-serif text-2xl tracking-tight text-bakery-ink">Bakerville</p>
+<p class="text-[10px] uppercase tracking-ultra-wide text-bakery-olive">Artisanal Bakery &amp; Cafe</p>
+</div>
+<span class="material-symbols-outlined text-bakery-olive text-3xl">bakery_dining</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="space-y-0.5">
+<p class="text-[10px] uppercase tracking-widest text-bakery-ink/50">Gift Amount</p>
+<p class="text-4xl font-serif text-bakery-ink">$50.00</p>
+</div>
+<p class="text-[10px] uppercase tracking-widest text-bakery-ink/40">Valid at all locations</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-bakery-paper p-8 rounded-2xl border border-bakery-olive/5">
+<h4 class="font-serif text-xl mb-4 italic">A meaningful gesture</h4>
+<p class="text-sm text-bakery-ink/70 leading-relaxed font-light">Each gift card is a ticket to our world of traditional long-fermentation and locally sourced grains. From the first crumb to the last sip of espresso.</p>
+</div>
+</div>
+<div class="space-y-12">
+<div>
+<span class="section-label">01. Select Amount</span>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 px-4 rounded-full border border-gray-300 text-sm hover:border-bakery-olive transition-colors font-medium"> $25 </button>
+<button class="py-3 px-4 rounded-full bg-bakery-olive text-white text-sm font-medium"> $50 </button>
+<button class="py-3 px-4 rounded-full border border-gray-300 text-sm hover:border-bakery-olive transition-colors font-medium"> $75 </button>
+<button class="py-3 px-4 rounded-full border border-gray-300 text-sm hover:border-bakery-olive transition-colors font-medium"> $100 </button>
+<button class="py-3 px-4 rounded-full border border-gray-300 text-sm hover:border-bakery-olive transition-colors font-medium"> $200 </button>
+<div class="relative">
+<input class="w-full py-3 px-4 rounded-full border border-gray-300 text-sm focus:ring-1 focus:ring-bakery-olive focus:border-bakery-olive text-center font-medium" placeholder="Custom" type="text"/>
+</div>
+</div>
+</div>
+<div>
+<span class="section-label">02. Delivery Method</span>
+<div class="flex bg-bakery-paper p-1 rounded-full w-full">
+<button class="flex-1 py-3 bg-bakery-olive text-white rounded-full text-xs font-semibold uppercase tracking-widest">
+                            Digital Email
+                        </button>
+<button class="flex-1 py-3 text-bakery-ink/60 hover:text-bakery-ink rounded-full text-xs font-semibold uppercase tracking-widest transition-colors">
+                            Physical Card
+                        </button>
+</div>
+</div>
+<div class="space-y-8">
+<span class="section-label">03. Recipient Details</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Recipient Name</label>
+<input class="input-bottom-border" placeholder="Who is this for?" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Recipient Email</label>
+<input class="input-bottom-border" placeholder="hello@example.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Your Name</label>
+<input class="input-bottom-border" placeholder="The sender" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Delivery Date</label>
+<input class="input-bottom-border" type="date"/>
+</div>
+</div>
+<div class="space-y-1">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Message (Optional)</label>
+<textarea class="input-bottom-border" placeholder="A small note of appreciation..." rows="2"></textarea>
+</div>
+</div>
+<button class="w-full py-5 bg-bakery-olive text-white rounded-full font-semibold uppercase tracking-widest text-xs hover:bg-bakery-ink transition-colors shadow-lg shadow-bakery-olive/20">
+                    Purchase Gift Card
+                </button>
+</div>
+</div>
+</section>
+<section class="py-32 border-t border-bakery-paper">
+<div class="max-w-4xl mx-auto px-8">
+<div class="bg-bakery-paper rounded-3xl p-12 md:p-16 text-center border border-bakery-olive/5 shadow-sm">
+<span class="section-label">Existing Holders</span>
+<h2 class="text-4xl md:text-5xl font-serif mb-6">Check Your Balance</h2>
+<p class="text-bakery-ink/60 mb-12 max-w-lg mx-auto font-light leading-relaxed">Simply enter your unique card number and PIN found on the back of your physical card or in your digital receipt.</p>
+<form class="max-w-md mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+<div class="text-left space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Card Number</label>
+<input class="input-bottom-border text-center tracking-[0.2em]" placeholder="0000 0000 0000" type="text"/>
+</div>
+<div class="text-left space-y-2">
+<label class="text-[10px] uppercase tracking-widest text-bakery-olive/70 font-bold">Security PIN</label>
+<input class="input-bottom-border text-center tracking-[0.2em]" placeholder="****" type="password"/>
+</div>
+</form>
+<button class="inline-block px-12 py-4 border border-bakery-ink rounded-full text-xs font-semibold uppercase tracking-widest hover:bg-bakery-ink hover:text-white transition-all">
+                    Verify Balance
+                </button>
+</div>
+</div>
+</section>
+<section class="bg-bakery-bg py-32 border-t border-bakery-paper">
+<div class="max-w-7xl mx-auto px-8 lg:px-20">
+<div class="text-center mb-24">
+<span class="section-label">The Process</span>
+<h2 class="text-5xl font-serif">Simplicity in every step</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+<div class="text-center space-y-6">
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-bakery-olive text-4xl font-light">payments</span>
+</div>
+<h3 class="text-2xl font-serif">Choose Your Value</h3>
+<p class="text-bakery-ink/70 leading-relaxed font-light text-sm">Select from our artisanal presets or define a custom amount tailored for your recipient's favorite treats.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-bakery-olive text-4xl font-light">auto_stories</span>
+</div>
+<h3 class="text-2xl font-serif">Add Your Story</h3>
+<p class="text-bakery-ink/70 leading-relaxed font-light text-sm">Compose a personal message and schedule the exact moment you'd like your digital or physical surprise to arrive.</p>
+</div>
+<div class="text-center space-y-6">
+<div class="flex justify-center">
+<span class="material-symbols-outlined text-bakery-olive text-4xl font-light">local_cafe</span>
+</div>
+<h3 class="text-2xl font-serif">Delivered with Care</h3>
+<p class="text-bakery-ink/70 leading-relaxed font-light text-sm">Our cards are redeemable for anything from a morning croissant to a private bread-making workshop at any of our cafes.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-bakery-ink text-bakery-paper py-24 px-8 lg:px-20">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-1 space-y-8">
+<h1 class="text-3xl font-serif tracking-tight text-white">Bakerville</h1>
+<p class="text-sm font-light leading-relaxed text-bakery-paper/60 italic">"Baking is a conversation between the grain, the baker, and the flame."</p>
+<div class="flex gap-6">
+<a class="hover:text-bakery-olive transition-colors opacity-70" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="hover:text-bakery-olive transition-colors opacity-70" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="hover:text-bakery-olive transition-colors opacity-70" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white mb-8">Navigation</h4>
+<ul class="space-y-4 text-sm font-light text-bakery-paper/70">
+<li><a class="hover:text-white transition-colors" href="#">The Bakehouse</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Current Menu</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Gift Vouchers</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Join Our Team</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white mb-8">Support</h4>
+<ul class="space-y-4 text-sm font-light text-bakery-paper/70">
+<li><a class="hover:text-white transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Location Finder</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs uppercase tracking-[0.2em] font-semibold text-white mb-8">The Journal</h4>
+<p class="text-sm font-light text-bakery-paper/70 mb-6 leading-relaxed">Receive baking schedules and seasonal news directly to your inbox.</p>
+<div class="flex border-b border-bakery-paper/20 pb-2">
+<input class="bg-transparent border-none text-sm p-0 w-full focus:ring-0 placeholder:text-bakery-paper/30" placeholder="Email address" type="email"/>
+<button class="text-xs uppercase tracking-widest font-bold text-white hover:text-bakery-olive transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-bakery-paper/10 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-[11px] font-light text-bakery-paper/40 uppercase tracking-widest">© 2024 Bakerville Artisanal Bread &amp; Co. All rights reserved.</p>
+<div class="flex gap-8 text-[11px] font-light text-bakery-paper/40 uppercase tracking-widest">
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+
+</body></html>

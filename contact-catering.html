@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bakerville | Contact &amp; Catering</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'bakerville-bg': '#fdfcf8',
+              'bakerville-paper': '#f5f2ed',
+              'bakerville-ink': '#1a1a1a',
+              'bakerville-olive': '#5A5A40',
+              'bakerville-crust': '#8B4513',
+            },
+            fontFamily: {
+              'serif': ['Cormorant Garamond', 'serif'],
+              'sans': ['Inter', 'sans-serif'],
+            },
+            letterSpacing: {
+              'widest-xl': '0.3em',
+            }
+          },
+        },
+      }
+    </script>
+<style type="text/tailwindcss">
+      @layer base {
+        body {
+          @apply bg-bakerville-bg text-bakerville-ink font-sans antialiased;
+        }
+        h1, h2, h3, h4, h5, h6 {
+          @apply font-serif font-light;
+        }
+      }
+      .section-label {
+        @apply text-xs uppercase tracking-widest-xl text-bakerville-olive font-medium mb-4 block;
+      }
+      .form-input-minimal {
+        @apply w-full bg-transparent border-t-0 border-x-0 border-b border-bakerville-ink/20 px-0 py-4 focus:ring-0 focus:border-bakerville-olive transition-colors;
+      }
+      .faq-trigger:hover .faq-icon {
+        @apply transform translate-x-1;
+      }
+    </style>
+</head>
+<body>
+<header class="fixed top-0 left-0 right-0 z-50 bg-bakerville-bg/70 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto px-8 h-24 flex items-center justify-between">
+<nav class="flex items-center gap-8 flex-1">
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Menu</a>
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Our Story</a>
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Gallery</a>
+</nav>
+<div class="flex-none text-center">
+<a class="text-3xl font-serif tracking-tight" href="#">Bakerville</a>
+</div>
+<nav class="flex items-center justify-end gap-8 flex-1">
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Catering</a>
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Order Online</a>
+<a class="text-[11px] uppercase tracking-widest font-medium hover:text-bakerville-olive transition-colors" href="#">Reviews</a>
+<button class="relative">
+<span class="material-symbols-outlined font-light text-bakerville-ink/80">shopping_bag</span>
+</button>
+</nav>
+</div>
+</header>
+<main>
+<section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="Bakerville Counter" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJhRK7GbUqj3fSchxwbXoxSkubGC1fOjo27pvNxHxcj58HIN6azp2DtI3gkZ6QaY4P0jyIHt5cqN16-wz-lo6L4DKkaKqZy9LJ5Qr5XnbCMfJL5GOWx72_2faSBgcrJLIScUZlHToQKMhXqb__q1K2a1c1qfiCZrhGi8WzgGly25AxtgT2a7a6AYn9v3DgyBhcMhJGKo7Te3zK7Mnxgg0-OkblKy5qJf1X3q0FDRQE15cHrMqjdeAsvsqu8EfxhV0eA-3FSR0j"/>
+<div class="absolute inset-0 bg-black/20"></div>
+</div>
+<div class="relative z-10 text-center px-4">
+<span class="text-white text-xs uppercase tracking-[0.4em] mb-6 block">Artisanal Gathering</span>
+<h1 class="text-white text-7xl md:text-8xl leading-tight">Let's Plan Together</h1>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-8 py-32">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-24">
+<div class="lg:col-span-7">
+<span class="section-label">Inquiry</span>
+<h2 class="text-5xl mb-12">Catering &amp; Private Events</h2>
+<form class="space-y-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Full Name</label>
+<input class="form-input-minimal" placeholder="Evelyn Grace" type="text"/>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Email Address</label>
+<input class="form-input-minimal" placeholder="hello@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Phone</label>
+<input class="form-input-minimal" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Event Type</label>
+<select class="form-input-minimal appearance-none cursor-pointer">
+<option>Bespoke Wedding</option>
+<option>Corporate Luncheon</option>
+<option>Private Soirée</option>
+<option>Wholesale Partnership</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Event Date</label>
+<input class="form-input-minimal" type="date"/>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Guest Count</label>
+<input class="form-input-minimal" placeholder="40" type="number"/>
+</div>
+</div>
+<div>
+<label class="text-[10px] uppercase tracking-widest text-bakerville-olive/60">Your Vision</label>
+<textarea class="form-input-minimal" placeholder="Describe the atmosphere and any specific culinary desires..." rows="4"></textarea>
+</div>
+<button class="bg-bakerville-olive text-white px-12 py-5 rounded-full uppercase tracking-[0.2em] text-xs font-medium hover:bg-bakerville-ink transition-all duration-300" type="submit">
+                            Send Inquiry
+                        </button>
+</form>
+</div>
+<div class="lg:col-span-5 space-y-12">
+<div class="bg-bakerville-paper p-10 md:p-14 rounded-[3rem] space-y-12">
+<div>
+<span class="section-label">Visit Us</span>
+<div class="flex gap-6 items-start mt-6">
+<span class="material-symbols-outlined text-bakerville-olive mt-1">location_on</span>
+<div>
+<h4 class="text-2xl mb-2">Main Street Studio</h4>
+<p class="text-sm text-bakerville-ink/70 leading-relaxed">530 W Main Street<br/>Bakerville, BK 90210</p>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<div class="flex gap-6 items-center">
+<span class="material-symbols-outlined text-bakerville-olive">call</span>
+<p class="text-sm tracking-wide">(555) 823-4567</p>
+</div>
+<div class="flex gap-6 items-center">
+<span class="material-symbols-outlined text-bakerville-olive">mail</span>
+<p class="text-sm tracking-wide">concierge@bakerville.com</p>
+</div>
+</div>
+<div class="pt-10 border-t border-bakerville-ink/5">
+<span class="section-label">Opening Hours</span>
+<div class="mt-6 space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-bakerville-ink/50">Mon — Fri</span>
+<span>07:00 — 18:00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-bakerville-ink/50">Saturday</span>
+<span>08:00 — 17:00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-bakerville-ink/50">Sunday</span>
+<span>08:00 — 16:00</span>
+</div>
+</div>
+</div>
+<div class="flex gap-6 pt-4">
+<a class="text-bakerville-olive hover:text-bakerville-crust transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+<a class="text-bakerville-olive hover:text-bakerville-crust transition-colors" href="#">
+<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+</div>
+</div>
+<div class="rounded-[2rem] overflow-hidden h-80 border border-bakerville-ink/5">
+<img alt="Location Map" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNZe357iZgk2sVc1Df-u5znXX_-jmFzzX4SpXmQ8DlA2AhNC7f8ocH4Xw27ibHN2qEbsEATwdrgIaGF0VjGEzC2cFDmtDC0_faPYnwMpp8ossmGqmgq88sTPGgZfraDafu03fW_k4ZePhMDlsH08aBDnbxU00szKCbf_3oQQOQpUeFFy_AU2edcsjtxdaDl3l3hUtaWact-d_zZRXbIIQ230LhYdkKSliYHuJERL0fprxkDFVneDugQ05FuBX3CKjbd4ADLp9t"/>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-bakerville-paper/50 py-32">
+<div class="max-w-4xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="section-label">Guidance</span>
+<h3 class="text-5xl mt-2">Common Inquiries</h3>
+</div>
+<div class="space-y-6">
+<div class="border-b border-bakerville-ink/10 pb-6 group">
+<button class="faq-trigger w-full flex items-center justify-between text-left">
+<h5 class="text-2xl hover:text-bakerville-olive transition-colors">Do you offer delivery for catering orders?</h5>
+<span class="material-symbols-outlined text-bakerville-olive faq-icon transition-transform">arrow_forward</span>
+</button>
+<div class="mt-4 text-bakerville-ink/70 leading-relaxed font-light pr-12">
+                            Our team provides bespoke delivery and setup within a 20-mile radius. For destinations further afield, we are happy to discuss custom logistics to ensure our products arrive in pristine condition.
+                        </div>
+</div>
+<div class="border-b border-bakerville-ink/10 pb-6 group">
+<button class="faq-trigger w-full flex items-center justify-between text-left">
+<h5 class="text-2xl hover:text-bakerville-olive transition-colors">What is your minimum for full-service events?</h5>
+<span class="material-symbols-outlined text-bakerville-olive faq-icon transition-transform">arrow_forward</span>
+</button>
+<div class="mt-4 text-bakerville-ink/70 leading-relaxed font-light pr-12">
+                            Typically, we accommodate gatherings of 25 guests or more for full-service. For more intimate moments, our 'Artisan Boxes' offer the same premium quality in a curated, drop-off format.
+                        </div>
+</div>
+<div class="border-b border-bakerville-ink/10 pb-6 group">
+<button class="faq-trigger w-full flex items-center justify-between text-left">
+<h5 class="text-2xl hover:text-bakerville-olive transition-colors">How do you manage dietary preferences?</h5>
+<span class="material-symbols-outlined text-bakerville-olive faq-icon transition-transform">arrow_forward</span>
+</button>
+<div class="mt-4 text-bakerville-ink/70 leading-relaxed font-light pr-12">
+                            Crafting inclusive experiences is at our heart. We specialize in gluten-sensitive sourdough and vegan patisserie options. Please highlight your requirements in your inquiry.
+                        </div>
+</div>
+<div class="pb-6 group">
+<button class="faq-trigger w-full flex items-center justify-between text-left">
+<h5 class="text-2xl hover:text-bakerville-olive transition-colors">What is the recommended booking timeline?</h5>
+<span class="material-symbols-outlined text-bakerville-olive faq-icon transition-transform">arrow_forward</span>
+</button>
+<div class="mt-4 text-bakerville-ink/70 leading-relaxed font-light pr-12">
+                            To ensure the highest quality of artisanal preparation, we recommend 4–6 months for weddings and 3 weeks for corporate or private gatherings.
+                        </div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-bakerville-ink text-bakerville-paper py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-start gap-16">
+<div class="space-y-6">
+<h2 class="text-4xl">Bakerville</h2>
+<p class="text-bakerville-paper/50 text-sm max-w-xs leading-relaxed">
+                        Honoring the craft of European baking through local ingredients and patient fermentation.
+                    </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-16">
+<div class="space-y-4">
+<h6 class="text-[10px] uppercase tracking-widest text-bakerville-paper/40">Explore</h6>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Our Menu</a></li>
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">The Bakery</a></li>
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Locations</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="text-[10px] uppercase tracking-widest text-bakerville-paper/40">Company</h6>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Sourcing</a></li>
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="text-[10px] uppercase tracking-widest text-bakerville-paper/40">Legal</h6>
+<ul class="text-sm space-y-2">
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-bakerville-olive transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-24 pt-8 border-t border-bakerville-paper/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-bakerville-paper/30">
+<p>© 2024 Bakerville Artisanal. All rights reserved.</p>
+<div class="flex gap-8">
+<a href="#">Instagram</a>
+<a href="#">Pinterest</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

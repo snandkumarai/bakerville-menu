@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bakerville Order Confirmation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "bakery-bg": "#fdfcf8",
+                        "paper": "#f5f2ed",
+                        "ink": "#1a1a1a",
+                        "olive": "#5A5A40",
+                        "crust": "#8B4513",
+                    },
+                    fontFamily: {
+                        "display": ["Cormorant Garamond", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "super-wide": "0.3em",
+                        "widest": "0.2em"
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-sans bg-bakery-bg text-ink;
+            }
+            h1, h2, h3, h4, h5 {
+                @apply font-display;
+            }
+        }
+        .section-label {
+            @apply text-xs uppercase tracking-super-wide text-olive font-semibold;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+<header class="py-10">
+<div class="max-w-7xl mx-auto px-6 flex justify-center">
+<a class="text-4xl font-display font-light tracking-tight" href="/">Bakerville</a>
+</div>
+</header>
+<main class="max-w-3xl mx-auto px-6 pb-24">
+<div class="mb-20">
+<div class="flex items-center justify-between relative max-w-xl mx-auto">
+<div class="absolute top-4 left-0 w-full h-[1px] bg-olive"></div>
+<div class="relative flex flex-col items-center gap-3">
+<div class="size-8 rounded-full bg-olive text-white flex items-center justify-center border-4 border-bakery-bg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="section-label">Cart</span>
+</div>
+<div class="relative flex flex-col items-center gap-3">
+<div class="size-8 rounded-full bg-olive text-white flex items-center justify-center border-4 border-bakery-bg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="section-label">Details</span>
+</div>
+<div class="relative flex flex-col items-center gap-3">
+<div class="size-8 rounded-full bg-olive text-white flex items-center justify-center border-4 border-bakery-bg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="section-label">Payment</span>
+</div>
+<div class="relative flex flex-col items-center gap-3">
+<div class="size-8 rounded-full bg-olive text-white flex items-center justify-center border-4 border-bakery-bg">
+<span class="material-symbols-outlined text-sm">check</span>
+</div>
+<span class="section-label">Confirm</span>
+</div>
+</div>
+</div>
+<div class="text-center mb-16">
+<div class="inline-flex items-center justify-center size-20 rounded-full bg-olive text-white mb-8 shadow-lg shadow-olive/10">
+<span class="material-symbols-outlined text-4xl">check</span>
+</div>
+<h2 class="text-5xl md:text-6xl font-display font-light text-ink mb-4">Order Confirmed!</h2>
+<p class="text-olive uppercase tracking-widest text-xs font-semibold">Order #BKV-2024-0847</p>
+</div>
+<div class="bg-paper rounded-[2rem] overflow-hidden mb-12 border border-olive/5">
+<div class="p-10 border-b border-olive/10">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+<div class="flex items-start gap-5">
+<div class="text-olive">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<p class="section-label mb-2">Pickup Details</p>
+<h3 class="text-2xl font-display text-ink leading-tight">530 W Main Street</h3>
+<p class="text-ink/60 mt-1">Ready for pickup at <span class="font-medium text-ink">10:30 AM Today</span></p>
+</div>
+</div>
+<div class="h-28 w-full md:w-44 bg-olive/5 rounded-2xl overflow-hidden relative border border-olive/10">
+<img alt="Location map" class="w-full h-full object-cover grayscale brightness-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYONpQsVl7ulxPFuLXCBdPC7TqyM1e0qFTu0VslxE6ytqUKt3lygl45U6H4XK8F8rOhE9g-kWqC37tQSK2ZqeofNVEKr1R9xN0FhfbRyu0Vuc4FtUVPRQgbZL3vTUNb63hF0Ly8nWSqMfZBRTkajDukAiSsSEl-moMLTjh8O_uqDL7c8rgvwJh2CAXdJ8h4f8p_qRmvSfCkLcKTuGW_JpZiI12k9JPlvzunSfCz31DbaLe7RTroXSqV4zjpN0fKw4RLgacjBF4"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-olive text-2xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+<div class="p-10">
+<p class="section-label mb-8">Your Order</p>
+<div class="space-y-8">
+<div class="flex items-center gap-6">
+<div class="size-20 rounded-2xl overflow-hidden flex-shrink-0 border border-olive/10">
+<img alt="Artisanal sourdough loaf" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXIB_nIyFYJZcd2T9myF8kxiCuCUODks5eHjLn7OI7he5GAvrZboBWNPVJpc6JNgQmcXmUpzcg9ej4r-NhGhxZxXx9XX-GMbps5Nc_zsFuwE0vsdUVJsl5dU1ZiqpOf-8TAtZyxOLEK9PwM4-LWle_bjBkf_p3YcBP5M9QBeRCEonlSOIOciugEfRo9kMTT7_RVGfY1SIgKZ7_WZei20Kbg1Ur1wlBmqIdeJdimhXRTGxleksFeamOzshStdK-WaMoynyT1wPQ"/>
+</div>
+<div class="flex-grow">
+<h5 class="text-xl font-display text-ink">Signature Sourdough Loaf</h5>
+<p class="text-sm text-ink/50 uppercase tracking-widest">Qty: 1</p>
+</div>
+<span class="text-lg font-display text-ink">$9.50</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="size-20 rounded-2xl overflow-hidden flex-shrink-0 border border-olive/10">
+<img alt="Almond croissant" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAstAv-AxGwn0rIHjA1xRL3iCTAcCstHfGDImelmsVCvjSf6th5hSou8GAhO8RVNzVA5NihhoUsRYmbFmizJvi5ioWHwWMosXJ2Yczc8CeMnFFI0co_Lwfi_S5KkKiNRCurwdgfVZnLt6iSNpa_8yDAf0iPOdAZQVtV71anDFHoiSE62lq-OZhbkQxHrYXOU4mSE5T2UDFrrJkTPRp3S6lhyvcKrCA4t7WL1OBksZ84DxBxVrClDdONr9M64VM1es-kxltf889z"/>
+</div>
+<div class="flex-grow">
+<h5 class="text-xl font-display text-ink">Hand-Rolled Croissant</h5>
+<p class="text-sm text-ink/50 uppercase tracking-widest">Qty: 2</p>
+</div>
+<span class="text-lg font-display text-ink">$11.00</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="size-20 rounded-2xl overflow-hidden flex-shrink-0 border border-olive/10">
+<img alt="Pain au chocolat" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbGNolWhbBqY2Hsm4WO8HqV7uF2jF4_aQXwmtHNnd5I2yN8-sWG2jeqnmuO0MxNnJWd6kr4EmKgtcFibW6h9JR2JhBz1RNZXStUJIYHzZbF6_Xy-ccyngBBQZd8ZTFZcJ3wf4ZCly2dAicQIt12rRqRTpLH58du4-5h78FcmsgAy_ORM8VZBSCcRK6mO8p-qVrAU4bWpcZt8TKMP0EJ06cwshjtMfTFxZfPtxRF7Smqnhr3slKAqIa4s2MSmYheuIxp35A0TtO"/>
+</div>
+<div class="flex-grow">
+<h5 class="text-xl font-display text-ink">Pain au Chocolat</h5>
+<p class="text-sm text-ink/50 uppercase tracking-widest">Qty: 1</p>
+</div>
+<span class="text-lg font-display text-ink">$6.50</span>
+</div>
+</div>
+<div class="mt-12 pt-10 border-t border-olive/10">
+<div class="space-y-4 max-w-xs ml-auto">
+<div class="flex justify-between text-ink/60">
+<span class="text-sm uppercase tracking-widest">Subtotal</span>
+<span class="font-display text-lg">$27.00</span>
+</div>
+<div class="flex justify-between text-ink/60">
+<span class="text-sm uppercase tracking-widest">Tax</span>
+<span class="font-display text-lg">$2.16</span>
+</div>
+<div class="flex justify-between text-ink pt-4 border-t border-olive/10">
+<span class="text-sm font-bold uppercase tracking-widest">Total</span>
+<span class="font-display text-3xl font-light">$29.16</span>
+</div>
+</div>
+<div class="mt-10 flex items-center justify-center gap-2 text-ink/40 text-sm">
+<span class="material-symbols-outlined text-base">credit_card</span>
+<p>Charged to Visa ending in 4242</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6 mb-24">
+<div class="flex flex-col sm:flex-row gap-4 w-full">
+<button class="flex-1 bg-olive text-white font-medium py-5 px-8 rounded-full transition-all hover:brightness-110 shadow-lg shadow-olive/10">
+                    Track Your Order
+                </button>
+<button class="flex-1 bg-transparent border border-ink text-ink font-medium py-5 px-8 rounded-full transition-all hover:bg-ink hover:text-white">
+                    Continue Shopping
+                </button>
+</div>
+<button class="text-olive border-b border-olive/20 hover:border-olive transition-colors text-sm uppercase tracking-widest font-semibold pb-1">
+                Print Receipt
+            </button>
+</div>
+<section class="bg-paper rounded-[2.5rem] p-12 text-center border border-olive/5">
+<h3 class="text-4xl font-display font-light text-ink mb-3">While You Wait</h3>
+<p class="text-ink/60 font-light mb-10 max-w-sm mx-auto">Discover the art of slow-fermented bread and join our community of artisans.</p>
+<div class="flex justify-center gap-10 mb-12">
+<a class="text-ink hover:text-olive transition-colors" href="#">
+<svg class="size-6 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c.796 0 1.441.645 1.441 1.44s-.645 1.44-1.441 1.44-1.44-.645-1.44-1.44.645-1.44 1.44-1.44z"></path></svg>
+</a>
+<a class="text-ink hover:text-olive transition-colors" href="#">
+<svg class="size-6 fill-current" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+</a>
+<a class="text-ink hover:text-olive transition-colors" href="#">
+<svg class="size-6 fill-current" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg>
+</a>
+</div>
+<form class="max-w-md mx-auto">
+<p class="section-label mb-5">The Weekly Knead</p>
+<div class="flex gap-2">
+<input class="flex-grow bg-white border border-olive/10 rounded-full px-6 py-4 text-sm focus:ring-olive focus:border-olive outline-none" placeholder="Email address" type="email"/>
+<button class="bg-olive text-white px-8 py-4 rounded-full text-sm font-semibold hover:brightness-110 transition-all" type="button">Join</button>
+</div>
+<p class="text-[10px] text-ink/30 mt-4 uppercase tracking-widest">Seasonal drops &amp; recipes delivered to your inbox.</p>
+</form>
+</section>
+</main>
+<footer class="bg-ink text-paper py-20 px-6">
+<div class="max-w-7xl mx-auto text-center">
+<h4 class="text-3xl font-display font-light mb-6">Bakerville</h4>
+<p class="text-xs uppercase tracking-[0.4em] opacity-40 mb-10 font-medium">Artisanal Bakery &amp; Café</p>
+<div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16 opacity-60 text-sm font-light">
+<a class="hover:text-white transition-colors" href="#">Locations</a>
+<a class="hover:text-white transition-colors" href="#">Story</a>
+<a class="hover:text-white transition-colors" href="#">Careers</a>
+<a class="hover:text-white transition-colors" href="#">Sustainability</a>
+</div>
+<div class="mt-20 pt-10 border-t border-white/5 opacity-30 text-[10px] uppercase tracking-widest">
+                © 2024 Bakerville. All rights reserved.
+            </div>
+</div>
+</footer>
+
+</body></html>

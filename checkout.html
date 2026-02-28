@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Revised Bakerville Checkout Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-base": "#fdfcf8",
+                        "bg-paper": "#f5f2ed",
+                        "ink": "#1a1a1a",
+                        "olive": "#5A5A40",
+                        "crust": "#8B4513",
+                    },
+                    fontFamily: {
+                        "display": ["Cormorant Garamond", "serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "widest-custom": "0.3em",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-bg-base text-ink font-sans antialiased;
+            }
+            h1, h2, h3, h4 {
+                @apply font-display font-light;
+            }
+        }
+        .section-label {
+            @apply text-[10px] md:text-xs uppercase tracking-widest-custom text-olive font-semibold mb-4 block;
+        }
+        .step-line {
+            @apply flex-1 h-px bg-gray-200 mx-4;
+        }
+        .step-line-active {
+            @apply bg-olive;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<nav class="border-b border-black/5 bg-bg-base/80 backdrop-blur-md sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-20 grid grid-cols-3 items-center">
+<div class="flex items-center">
+<a class="flex items-center gap-1 text-olive hover:opacity-70 transition-opacity text-sm font-medium" href="#">
+<span class="material-symbols-outlined text-lg leading-none">west</span>
+<span class="hidden sm:inline">Back to Cart</span>
+</a>
+</div>
+<div class="flex justify-center">
+<h1 class="text-3xl font-display tracking-tight text-ink">Bakerville</h1>
+</div>
+<div class="flex justify-end">
+</div>
+</div>
+</nav>
+<main class="flex-grow">
+<div class="max-w-3xl mx-auto px-6 pt-12 pb-16">
+<div class="flex items-center justify-between">
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 rounded-full border border-olive bg-bg-base flex items-center justify-center">
+<span class="material-symbols-outlined text-olive text-lg">check</span>
+</div>
+<span class="text-[10px] uppercase tracking-widest text-ink font-medium">Cart</span>
+</div>
+<div class="step-line step-line-active"></div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-olive flex items-center justify-center text-white text-sm font-medium">2</div>
+<span class="text-[10px] uppercase tracking-widest text-olive font-bold">Details</span>
+</div>
+<div class="step-line"></div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-white text-sm font-medium">3</div>
+<span class="text-[10px] uppercase tracking-widest text-gray-400 font-medium">Payment</span>
+</div>
+<div class="step-line"></div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-white text-sm font-medium">4</div>
+<span class="text-[10px] uppercase tracking-widest text-gray-400 font-medium">Done</span>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 pb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7 space-y-16">
+<section>
+<span class="section-label">01. Contact Information</span>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-widest text-gray-500 font-bold ml-1">Email Address</label>
+<input class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-xl p-4 transition-all" placeholder="customer@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-widest text-gray-500 font-bold ml-1">Phone Number</label>
+<input class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-xl p-4 transition-all" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</div>
+</section>
+<section>
+<span class="section-label">02. Fulfillment Method</span>
+<div class="inline-flex p-1 bg-bg-paper rounded-full mb-10 w-full max-w-sm">
+<button class="flex-1 py-3 px-6 rounded-full bg-olive text-white text-xs uppercase tracking-widest font-bold shadow-md">Pickup</button>
+<button class="flex-1 py-3 px-6 rounded-full text-gray-500 text-xs uppercase tracking-widest font-bold hover:text-olive transition-colors">Delivery</button>
+</div>
+<div class="grid grid-cols-1 gap-8">
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-widest text-gray-500 font-bold ml-1">Bakery Location</label>
+<select class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-xl p-4 appearance-none transition-all">
+<option>Bakerville Central - 123 Artisan Way</option>
+<option>Bakerville East - 456 Crust Blvd</option>
+</select>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-widest text-gray-500 font-bold ml-1">Pickup Date</label>
+<input class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-xl p-4 transition-all" type="date"/>
+</div>
+<div class="space-y-2">
+<label class="text-[11px] uppercase tracking-widest text-gray-500 font-bold ml-1">Pickup Time</label>
+<select class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-xl p-4 transition-all">
+<option>09:00 AM - 10:00 AM</option>
+<option>10:00 AM - 11:00 AM</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<section>
+<span class="section-label">03. Special Instructions</span>
+<textarea class="w-full bg-bg-paper border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-3xl p-6 transition-all" placeholder="Any special requests for our bakers..." rows="4"></textarea>
+</section>
+</div>
+<div class="lg:col-span-5">
+<div class="sticky top-28 bg-bg-paper rounded-[2rem] p-8 md:p-10 shadow-sm border border-black/5">
+<h2 class="text-3xl font-display mb-10 text-ink">Order Summary</h2>
+<div class="space-y-8 mb-10">
+<div class="flex gap-6">
+<div class="w-20 h-20 rounded-2xl overflow-hidden bg-white shadow-sm flex-shrink-0">
+<img alt="Sourdough Boule" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgziZ3odyYSniaNIf_WkKXztZ-pT7z5vwGoADMISsJTe2kwbOhpNMQi9Df4x0nOAtY1rBqnrqfSnkVmFkJc6ie_RpGkfyHfKe2Zb308qSkt_27O9UGAuRocB5VFKwsUzmrPJeA9Eh_qKKKsx-b9uhlUQpo_cNkwh98mXQF5CYs-i1SVsxLmSZRrA4-W_aQ6XYU6NNENEGfAV-gx6BWBvl7bAXWaCz9_Yi7ESQ8SU6K2CyNHSr4M7qorjQd_Jq48sKysEKGrMcB"/>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="text-xl font-display">Sourdough Boule</h3>
+<span class="text-sm font-semibold">$12.00</span>
+</div>
+<div class="flex justify-between items-baseline">
+<p class="text-[13px] text-gray-500 italic">Hand-scored, 24hr ferment</p>
+<span class="text-[11px] font-bold text-olive">Qty 1</span>
+</div>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-20 h-20 rounded-2xl overflow-hidden bg-white shadow-sm flex-shrink-0">
+<img alt="Pistachio Croissant" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkXYu9siirPyXqMsAroyNDZ3smpVfZvlSx4jzKx1s8mU5cJc0CPQobY_htzS4ioFFRvFiUKLWc08lMiqLRhEbDcOjKV_YrOyGEwTYDcXMdHbVaPNK67INR6549KRmV-IOyjARE90OvqcSnEGxRG1LBbMh7ghtugnGmFLx_HW6GLLsJOdqU39mvmQj-3UAxCQaSyUm1Nh52rUBb2OMh8gof4z9OCpr8D2Y1rzZpHc2yGLMknbY6ju_CZKjbDiGMpPf0lRTzp2IR"/>
+</div>
+<div class="flex-grow flex flex-col justify-center">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="text-xl font-display">Pistachio Croissant</h3>
+<span class="text-sm font-semibold">$15.00</span>
+</div>
+<div class="flex justify-between items-baseline">
+<p class="text-[13px] text-gray-500 italic">Twice-baked artisanal pastry</p>
+<span class="text-[11px] font-bold text-olive">Qty 2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-4 mb-10 pb-10 border-b border-black/5">
+<input class="flex-grow bg-white border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-full px-6 py-3 text-xs tracking-widest placeholder:text-gray-400" placeholder="PROMO CODE" type="text"/>
+<button class="text-olive uppercase tracking-[0.2em] text-[11px] font-bold px-4 hover:opacity-70 transition-opacity">Apply</button>
+</div>
+<div class="mb-10">
+<span class="text-[10px] uppercase tracking-widest text-olive font-bold mb-4 block">Payment Securely Handled</span>
+<div class="space-y-4">
+<input class="w-full bg-white border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-2xl p-4 text-sm" placeholder="Card Number" type="text"/>
+<div class="grid grid-cols-2 gap-4">
+<input class="w-full bg-white border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-2xl p-4 text-sm" placeholder="MM/YY" type="text"/>
+<input class="w-full bg-white border-transparent focus:ring-1 focus:ring-olive focus:border-olive rounded-2xl p-4 text-sm" placeholder="CVC" type="text"/>
+</div>
+</div>
+</div>
+<div class="space-y-4 mb-10">
+<div class="flex justify-between text-sm text-gray-500">
+<span>Subtotal</span>
+<span>$27.00</span>
+</div>
+<div class="flex justify-between text-sm text-gray-500">
+<span>Shipping</span>
+<span class="text-olive">Free</span>
+</div>
+<div class="flex justify-between text-sm text-gray-500">
+<span>Tax</span>
+<span>$2.43</span>
+</div>
+<div class="flex justify-between text-2xl font-display pt-6 border-t border-black/5">
+<span>Total Amount</span>
+<span class="font-normal">$29.43</span>
+</div>
+</div>
+<button class="w-full bg-olive hover:bg-opacity-90 text-white rounded-full py-5 text-sm uppercase tracking-[0.3em] font-bold shadow-lg shadow-olive/20 transition-all hover:scale-[1.01] active:scale-[0.98]">
+                            Place Order
+                        </button>
+<div class="mt-8 flex justify-center items-center gap-6 opacity-40 grayscale">
+<span class="material-symbols-outlined">shield</span>
+<span class="material-symbols-outlined">payments</span>
+<span class="material-symbols-outlined">lock_reset</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-ink text-bg-paper py-20">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-10">
+<div class="text-center md:text-left">
+<h2 class="text-4xl font-display mb-4">Bakerville</h2>
+<p class="text-bg-paper/60 font-light max-w-xs leading-relaxed">Artisanal European baking traditions brought to your table daily.</p>
+</div>
+<div class="flex gap-16">
+<div class="space-y-4">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-bg-paper/40">Connect</span>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="block text-[10px] uppercase tracking-widest font-bold text-bg-paper/40">Bakery</span>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-white transition-colors" href="#">Locations</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Sustainability</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase tracking-widest font-bold text-bg-paper/30">
+<p>© 2024 Bakerville Artisanal Group</p>
+<div class="flex gap-8">
+<a href="#">Privacy Policy</a>
+<a href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

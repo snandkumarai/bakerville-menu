@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bakerville | Shopping Basket</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "bg-main": "#fdfcf8",
+                        "bg-paper": "#f5f2ed",
+                        "ink": "#1a1a1a",
+                        "olive": "#5A5A40",
+                        "crust": "#8B4513",
+                    },
+                    fontFamily: {
+                        "serif": ["Cormorant Garamond", "serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    letterSpacing: {
+                        "widest-luxury": "0.3em",
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-bg-main text-ink font-sans antialiased;
+            }
+            h1, h2, h3, h4, h5, h6 {
+                @apply font-serif font-light;
+            }
+        }
+        .section-label {
+            @apply text-xs uppercase tracking-widest-luxury text-olive font-semibold;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body>
+<header class="fixed top-0 left-0 right-0 z-50 bg-bg-main/70 backdrop-blur-md border-b border-olive/5">
+<div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+<nav class="hidden lg:flex items-center gap-8 w-1/3">
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Menu</a>
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Our Story</a>
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Gallery</a>
+</nav>
+<div class="flex items-center justify-center w-1/3">
+<a class="text-3xl font-serif tracking-tight text-ink" href="#">BAKERVILLE</a>
+</div>
+<div class="flex items-center justify-end gap-8 w-1/3">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Catering</a>
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Order Online</a>
+<a class="text-[11px] font-medium tracking-widest-luxury uppercase hover:text-olive transition-colors" href="#">Reviews</a>
+</nav>
+<button class="relative p-1">
+<span class="material-symbols-outlined text-2xl">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-olive text-white text-[9px] font-bold w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-8 pt-40 pb-24">
+<div class="mb-16">
+<span class="section-label">Your Selection</span>
+<h2 class="text-5xl mt-2">Shopping Basket</h2>
+</div>
+<div class="flex flex-col lg:flex-row gap-16">
+<div class="flex-1 space-y-6">
+<div class="bg-bg-paper p-8 rounded-2xl border border-olive/5 flex flex-col md:flex-row items-center gap-8 group">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 bg-white shadow-sm">
+<img alt="Signature Sourdough" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDogjeB9i4uzoagX3aCGSoIEefVGa9KnLbY3A4ERFbMsi6aqCp8aqgMIU1ES-DrNNJPN4D9Gz4xicUEk3Mfo80d4Hfmg0AMl6x7-aaxu-g9pP_omszKLwQ7jjDoJQnbZKvhTiiqA89nwjWXbR-8bvGCZX7Yhd3nAPPZNxbt7-DYPs5XjyN5PO7AWb_zSak08ZhNNgRbd-4kvxTADivxof_v0JOrV9P5Exod6DjgzwTord-fMTwDgtQ4Oz_o_aOh8bVqf8Erav-a"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl">Signature Sourdough</h3>
+<p class="text-xl font-serif">$12.00</p>
+</div>
+<p class="text-sm text-ink/60 mb-6 leading-relaxed max-w-md">Slow-fermented for 48 hours using our heritage starter, resulting in a complex flavor and perfect crust.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-semibold w-4 text-center">1</span>
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-bg-paper p-8 rounded-2xl border border-olive/5 flex flex-col md:flex-row items-center gap-8 group">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 bg-white shadow-sm">
+<img alt="Butter Croissant" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAks_yN_SCUxToxU-zDyVSqOTvDJgZJR7DOLKEKKQjhxtM87FsLqGwwaRfMHGPCgEecsu1_H2IWprpIHIbhvROoCmQHZ5wP4UL2c74Y6Fpya2ouf9KwTBV0bKF4OOm_RIZhcKvWSnshAELZNbRHv1QgIrmWcHluBTkJNki1vbQ9W1CduVsNzB-x5MFcV0QbUuwt4yMdTVs2W7IhyaUZPjMtqgK1ugpNDpDcvrlGgAySI98Puka80FuLGjfXqTb0u7NHrVZC7-P3"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl">Traditional Butter Croissant</h3>
+<p class="text-xl font-serif">$11.00</p>
+</div>
+<p class="text-sm text-ink/60 mb-6 leading-relaxed max-w-md">Hand-laminated with high-fat AOP butter for an exceptionally flaky, honeycomb texture.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-semibold w-4 text-center">2</span>
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-bg-paper p-8 rounded-2xl border border-olive/5 flex flex-col md:flex-row items-center gap-8 group">
+<div class="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 bg-white shadow-sm">
+<img alt="Pain au Chocolat" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZkQi87A5RjpAV9D2-uLANeenfTlObrJrtbl1TmRulFR1asc69-r_grFnmN-4MDAmddA8L5J1Mz4OXZVUokA65Qx3z7MQgsFf_Gq-_htXxbwK0Zectl8Hl0OrKH_NxPmpmCA6R5C5Q8Qw84bgULeC0-Dpou1-g3RZHsYlwsRJYs0AXC5UcZCtu4j7b3UCuniOS61GxxoWuBhxh8rYzm5HbSjzPEPGOUHr7z6VRDh-xfOUBwPywMP-nsHZe4x1GYz6EkuDAF_a_"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-2xl">Pain au Chocolat</h3>
+<p class="text-xl font-serif">$6.50</p>
+</div>
+<p class="text-sm text-ink/60 mb-6 leading-relaxed max-w-md">Flaky layers surrounding three bars of premium dark chocolate. A classic Parisian morning treat.</p>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 bg-bg-main border border-olive/10 px-3 py-1.5 rounded-full">
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="text-xs font-semibold w-4 text-center">1</span>
+<button class="hover:text-olive transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<button class="text-[10px] font-semibold uppercase tracking-widest text-ink/40 hover:text-red-800 transition-colors">Remove</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="w-full lg:w-[420px]">
+<div class="bg-bg-paper p-10 rounded-2xl sticky top-32 border border-olive/5">
+<span class="section-label block mb-6">Summary</span>
+<div class="flex p-1 bg-bg-main rounded-full mb-10 border border-olive/5">
+<button class="flex-1 py-2 text-[10px] uppercase tracking-widest font-bold bg-olive text-white rounded-full transition-all">Pickup</button>
+<button class="flex-1 py-2 text-[10px] uppercase tracking-widest font-bold text-ink/40 hover:text-olive transition-all">Delivery</button>
+</div>
+<div class="space-y-6 mb-10">
+<div>
+<label class="block text-[10px] uppercase tracking-widest-luxury text-olive mb-3">Collection Date</label>
+<select class="w-full bg-transparent border-b border-olive/20 border-x-0 border-t-0 py-2 focus:ring-0 focus:border-olive text-sm font-light">
+<option>Tomorrow, Friday 12th</option>
+<option>Saturday 13th</option>
+<option>Sunday 14th</option>
+</select>
+</div>
+<div>
+<label class="block text-[10px] uppercase tracking-widest-luxury text-olive mb-3">Preferred Time</label>
+<select class="w-full bg-transparent border-b border-olive/20 border-x-0 border-t-0 py-2 focus:ring-0 focus:border-olive text-sm font-light">
+<option>08:30 — 09:30 AM</option>
+<option>09:30 — 10:30 AM</option>
+<option>10:30 — 11:30 AM</option>
+</select>
+</div>
+</div>
+<div class="space-y-4 pt-8 border-t border-olive/10 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-ink/60 font-light">Subtotal</span>
+<span>$29.50</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-ink/60 font-light">Packaging &amp; Service</span>
+<span class="text-olive uppercase text-[10px] font-bold tracking-widest">Complimentary</span>
+</div>
+<div class="flex justify-between text-2xl pt-4 border-t border-olive/5">
+<span class="font-serif">Total</span>
+<span class="font-serif">$29.50</span>
+</div>
+</div>
+<button class="w-full bg-olive text-white py-5 rounded-full uppercase tracking-[0.2em] text-[11px] font-semibold hover:bg-ink transition-all flex items-center justify-center gap-3">
+                    Proceed to Checkout
+                    <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+</button>
+<p class="text-center text-[10px] text-ink/30 mt-6 tracking-widest uppercase">Secure checkout powered by BAKERVILLE</p>
+</div>
+</aside>
+</div>
+<section class="mt-40">
+<div class="text-center mb-16">
+<span class="section-label">Perfect Pairings</span>
+<h3 class="text-4xl mt-3">You Might Also Like</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
+<img alt="Cinnamon Rolls" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkLtjLssuGy2eDVSLFH8MXlkd3HL8kqsm-P-9yRYGIewMnpO_ljy45IJfbM9kiK9ryk75yDku2yhPtxquWWd31pLuVWy7UVz1s4rrneesQCI-6YJx6G1JXe2KOvZQug3z9RVHkdKsjPX-gHHogh9uKF5bXLZaVzQBZkxq8BN29Sux-IaVhAOReF7ttTbpjyrwxPcwaT6asT05CqjFvh-L6_llRb8I-nrXIVuu_0FU_r3tNFkhrUd9V6HfzzI01jI1duVRGo84R"/>
+</div>
+<h4 class="text-2xl mb-1">Morning Buns</h4>
+<p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Cinnamon &amp; Orange</p>
+<p class="text-lg font-serif">$4.50</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
+<img alt="Focaccia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC60cslDuRMWnEFZk_-_KN72REDfx6FWAhrzY0twTWMhUn2yxPkA4Iny705pDcwIeiB0-SMhtTGg97s2qyFFRwTG9MctC3LZYJhEwNB6cpqHWOJ36BJWmMoFfcTz-R_3XLTFPOlszwxKGN4FuDMhyhMdWI5eUC7bQ-QH1YlMJvcJldtpw6DNA74q-Lchuv7y3RZj0NIzoTnCtN7Xe6YLwoslrUWAAi7ube6WkBNwymax8qySNlTj-wx8uGNuAIk_EN8qapPh7OZ"/>
+</div>
+<h4 class="text-2xl mb-1">Rosemary Focaccia</h4>
+<p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Sea Salt &amp; EVOO</p>
+<p class="text-lg font-serif">$9.00</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
+<img alt="Almond Pastry" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvDFYY4F7WYI7hh9-8a9xAMtTUodg8Hq2X5Tkcrfs0yQpptL2im2Hoq_cJKgeY7u6TT0kTSFtBUHuq_ddsIR6IVm541AU82eChYHD0-KHQiUFPeM4wuxMWGum7DMjo9Tgr6MuvxWhOytoTnAvjpwEMtEDRQ7RqgKDNVfMxnU3ma6j6v7PXHo1Q0GMN_Ni4SI7-ma0t4DOqaEZJgso1yzZSP_Dh3y7CkQjkQgEoi5DxhdZnu_lHVMuaXydxpDx8hllGpp84jQNQ"/>
+</div>
+<h4 class="text-2xl mb-1">Almond Frangipane</h4>
+<p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">Toasted Almonds</p>
+<p class="text-lg font-serif">$5.50</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-2xl overflow-hidden mb-6 bg-bg-paper">
+<img alt="Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRhM1ekPhwhHVnv2OQcl1TITm0TBYvs85ZdrIkzlLAH5hjTg-rKSHlnjROjoEN5DCRHc3RE9lYRSiDLcufUiVlLpn8NZsVQHmvD9TDV7HkquzjmQRhs2a9NGxeCsOoIDNERMbUIj_sPIPUe40oYN-0UahTHHBSULBujMjsVkVdQwhVYDNxLLgA40zlv_hUhuBuxbP8IcZatZShPKAQwpdUZOaeWCRMMRbhpYstB48bgzx7PVr1kHqCMMTGip6entOnfaZBXeSx"/>
+</div>
+<h4 class="text-2xl mb-1">Artisan Flat White</h4>
+<p class="text-[10px] text-olive uppercase tracking-widest font-bold mb-3">House Blend No.1</p>
+<p class="text-lg font-serif">$4.25</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-ink text-bg-paper py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+<div class="col-span-1 md:col-span-2">
+<h2 class="text-4xl mb-8">BAKERVILLE</h2>
+<p class="text-bg-paper/50 text-sm max-w-sm leading-relaxed mb-8">Crafting artisanal experiences from heritage grains and traditional techniques. Join us at our flagship bakeries for daily bakes and fresh-roasted coffee.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-bg-paper/20 rounded-full flex items-center justify-center hover:bg-bg-paper hover:text-ink transition-colors" href="#"><span class="material-symbols-outlined text-lg">public</span></a>
+<a class="w-10 h-10 border border-bg-paper/20 rounded-full flex items-center justify-center hover:bg-bg-paper hover:text-ink transition-colors" href="#"><span class="material-symbols-outlined text-lg">camera</span></a>
+</div>
+</div>
+<div>
+<h5 class="section-label text-bg-paper/60 mb-6">Explore</h5>
+<ul class="space-y-4 text-sm font-light">
+<li><a class="hover:text-olive transition-colors" href="#">Our Bakes</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Locations</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Workshops</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Subscriptions</a></li>
+</ul>
+</div>
+<div>
+<h5 class="section-label text-bg-paper/60 mb-6">Contact</h5>
+<ul class="space-y-4 text-sm font-light">
+<li><a class="hover:text-olive transition-colors" href="#">Customer Care</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Wholesale</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-olive transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-24 pt-8 border-t border-bg-paper/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-bg-paper/30">
+<span>© 2024 Bakerville Artisanal Bakeries</span>
+<div class="flex gap-8">
+<a class="hover:text-bg-paper transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-bg-paper transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-bg-paper transition-colors" href="#">Accessibility</a>
+</div>
+</div>
+</footer>
+
+</body></html>
