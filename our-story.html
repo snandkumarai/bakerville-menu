@@ -51,25 +51,43 @@
 
 <body class="antialiased">
     <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-md border-b border-olive/10">
-        <div class="max-w-7xl mx-auto px-8 h-24 grid grid-cols-3 items-center">
-            <nav class="flex items-center gap-8 text-xs uppercase tracking-widest font-medium">
+        <div class="max-w-7xl mx-auto px-8 h-24 flex items-center justify-between">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 hover:text-crust transition-colors" aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-medium flex-1">
                 <a class="hover:text-crust transition-colors" href="full-menu.html">Menu</a>
-                <a class="hover:text-crust transition-colors" href="our-story.html">Our Story</a>
+                <a class="text-crust border-b border-crust pb-1" href="our-story.html">Our Story</a>
             </nav>
             <div class="flex justify-center">
                 <a href="index.html"
                     class="text-3xl font-serif tracking-tight no-underline text-inherit hover:opacity-80 transition-opacity">Bakerville</a>
             </div>
-            <div class="flex items-center justify-end gap-8">
+            <div class="hidden lg:flex items-center justify-end gap-8 flex-1">
                 <a class="text-xs uppercase tracking-widest font-medium hover:text-crust transition-colors"
                     href="contact-catering.html">Catering</a>
                 <a class="text-xs uppercase tracking-widest font-medium hover:text-crust transition-colors"
                     href="shopping-cart.html">Order Online</a>
-                <a href="shopping-cart.html" class="flex items-center gap-2 hover:text-crust transition-colors"><span
+                <a href="shopping-cart.html" class="flex items-center gap-2 hover:text-crust transition-colors" aria-label="Shopping cart"><span
                         class="material-symbols-outlined font-light">shopping_bag</span></a>
             </div>
+            <a href="shopping-cart.html" class="lg:hidden flex items-center hover:text-crust transition-colors" aria-label="Shopping cart"><span
+                    class="material-symbols-outlined font-light">shopping_bag</span></a>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-cream border-t border-olive/10 px-8 py-6 space-y-4">
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-crust transition-colors" href="full-menu.html">Menu</a>
+            <a class="block text-sm font-medium uppercase tracking-widest text-crust" href="our-story.html">Our Story</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-crust transition-colors" href="contact-catering.html">Catering</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-crust transition-colors" href="shopping-cart.html">Order Online</a>
         </div>
     </header>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
+    </script>
     <main>
         <section class="relative h-[85vh] w-full overflow-hidden">
             <div class="absolute inset-0 bg-black/30 z-10"></div>
@@ -292,7 +310,7 @@
             </div>
             <div
                 class="pt-8 border-t border-paper/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-widest text-paper/30">
-                <p>© 2024 Bakerville Artisanal Bakery</p>
+                <p>© 2025 Bakerville Artisanal Bakery</p>
                 <div class="flex gap-8">
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>

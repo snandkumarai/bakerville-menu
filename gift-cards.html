@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Revised Bakerville Gift Cards</title>
+    <title>Bakerville | Gift Cards</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
@@ -54,25 +54,46 @@
 
 <body>
     <header class="fixed top-0 w-full z-50 bg-bakery-bg/70 backdrop-blur-md border-b border-bakery-olive/10 px-8 py-5">
-        <div class="max-w-7xl mx-auto grid grid-cols-3 items-center">
-            <nav class="flex items-center gap-8 text-[13px] uppercase tracking-widest font-medium">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 hover:text-bakery-olive transition-colors" aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] uppercase tracking-widest font-medium flex-1">
                 <a class="hover:text-bakery-olive transition-colors" href="full-menu.html">Menu</a>
                 <a class="hover:text-bakery-olive transition-colors" href="our-story.html">Our Story</a>
             </nav>
             <div class="text-center">
                 <a class="text-3xl font-serif tracking-tight" href="index.html">Bakerville</a>
             </div>
-            <nav class="flex items-center justify-end gap-8 text-[13px] uppercase tracking-widest font-medium">
+            <nav class="hidden lg:flex items-center justify-end gap-8 text-[13px] uppercase tracking-widest font-medium flex-1">
                 <a class="hover:text-bakery-olive transition-colors" href="contact-catering.html">Catering</a>
                 <a class="hover:text-bakery-olive transition-colors" href="shopping-cart.html">Order Online</a>
-                <a href="shopping-cart.html" class="relative ml-2">
+                <a href="shopping-cart.html" class="relative ml-2" aria-label="Shopping cart, 0 items">
                     <span class="material-symbols-outlined text-xl">shopping_bag</span>
                     <span
                         class="absolute -top-1 -right-1 bg-bakery-crust text-white text-[9px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
                 </a>
             </nav>
+            <a href="shopping-cart.html" class="lg:hidden relative" aria-label="Shopping cart, 0 items">
+                <span class="material-symbols-outlined text-xl">shopping_bag</span>
+                <span class="absolute -top-1 -right-1 bg-bakery-crust text-white text-[9px] rounded-full h-4 w-4 flex items-center justify-center">0</span>
+            </a>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-bakery-bg border-t border-bakery-olive/10 px-8 py-6 space-y-4">
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="full-menu.html">Menu</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="our-story.html">Our Story</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="contact-catering.html">Catering</a>
+            <a class="block text-sm font-medium uppercase tracking-widest hover:text-bakery-olive transition-colors" href="shopping-cart.html">Order Online</a>
+            <a class="block text-sm font-medium uppercase tracking-widest text-bakery-olive" href="gift-cards.html">Gift Cards</a>
         </div>
     </header>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
+    </script>
     <main>
         <section class="relative h-[85vh] flex items-center justify-center overflow-hidden pt-20">
             <div class="absolute inset-0 z-0">
@@ -331,7 +352,7 @@
         </div>
         <div
             class="max-w-7xl mx-auto border-t border-bakery-paper/10 mt-20 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-            <p class="text-[11px] font-light text-bakery-paper/40 uppercase tracking-widest">© 2024 Bakerville Artisanal
+            <p class="text-[11px] font-light text-bakery-paper/40 uppercase tracking-widest">© 2025 Bakerville Artisanal
                 Bread &amp; Co. All rights reserved.</p>
             <div class="flex gap-8 text-[11px] font-light text-bakery-paper/40 uppercase tracking-widest">
                 <a class="hover:text-white transition-colors" href="#">Terms of Service</a>

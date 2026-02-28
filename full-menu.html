@@ -56,8 +56,11 @@
 <body class="antialiased">
     <header class="fixed top-0 w-full z-50 nav-blur border-b border-olive/5">
         <div class="max-w-screen-2xl mx-auto px-8 h-24 flex items-center justify-between">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 hover:text-olive transition-colors" aria-label="Open navigation menu">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
             <nav class="hidden lg:flex items-center gap-10 flex-1">
-                <a class="text-xs font-semibold uppercase tracking-widest hover:text-olive transition-colors"
+                <a class="text-xs font-semibold uppercase tracking-widest text-olive border-b border-olive pb-1"
                     href="full-menu.html">Menu</a>
                 <a class="text-xs font-semibold uppercase tracking-widest hover:text-olive transition-colors"
                     href="our-story.html">Our Story</a>
@@ -70,17 +73,30 @@
             <div class="flex items-center justify-end gap-10 flex-1">
                 <a class="hidden lg:block text-xs font-semibold uppercase tracking-widest hover:text-olive transition-colors"
                     href="contact-catering.html">Catering</a>
-                <a href="shopping-cart.html" class="relative hover:text-olive transition-colors"><span
+                <a href="shopping-cart.html" class="relative hover:text-olive transition-colors" aria-label="Shopping cart, 0 items"><span
                         class="material-symbols-outlined font-light">shopping_bag</span>
                     <span
                         class="absolute -top-1 -right-1 bg-olive text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
                 </a>
                 <a href="shopping-cart.html"
-                    class="border border-ink px-6 py-2 text-xs font-semibold uppercase tracking-widest hover:bg-ink hover:text-white transition-all inline-block text-center no-underline">Order
+                    class="hidden lg:inline-block border border-ink px-6 py-2 text-xs font-semibold uppercase tracking-widest hover:bg-ink hover:text-white transition-all text-center no-underline">Order
                     Online</a>
             </div>
         </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-bg-main border-t border-olive/10 px-8 py-6 space-y-4">
+            <a class="block text-sm font-semibold uppercase tracking-widest text-olive" href="full-menu.html">Menu</a>
+            <a class="block text-sm font-semibold uppercase tracking-widest hover:text-olive transition-colors" href="our-story.html">Our Story</a>
+            <a class="block text-sm font-semibold uppercase tracking-widest hover:text-olive transition-colors" href="contact-catering.html">Catering</a>
+            <a class="block text-sm font-semibold uppercase tracking-widest hover:text-olive transition-colors" href="shopping-cart.html">Order Online</a>
+        </div>
     </header>
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            this.setAttribute('aria-expanded', !menu.classList.contains('hidden'));
+        });
+    </script>
     <main>
         <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0">
@@ -298,7 +314,7 @@
                 </div>
             </div>
             <div class="pt-12 border-t border-paper/5 flex flex-col md:flex-row justify-between items-center gap-8">
-                <p class="text-[10px] uppercase tracking-widest opacity-30">© 2024 Bakerville Artisanal Bakery. All
+                <p class="text-[10px] uppercase tracking-widest opacity-30">© 2025 Bakerville Artisanal Bakery. All
                     rights reserved.</p>
                 <div class="flex gap-8 text-[10px] uppercase tracking-widest opacity-30">
                     <a class="hover:opacity-100" href="#">Privacy</a>
